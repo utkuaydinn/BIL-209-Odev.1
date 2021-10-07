@@ -1,0 +1,86 @@
+<html>
+
+<style>
+  body{
+background: rgb(55,160,232);
+background: linear-gradient(90deg, rgba(55,160,232,0.6250875350140056) 21%, rgba(0,255,201,0.26934523809523814) 51%, rgba(255,241,167,0.26094187675070024) 93%);
+  }
+  .main{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  
+</style>
+
+<head>
+</head>
+
+<body>
+
+<div class="main">
+<h3>Utku Aydın-200601019-Web Tabanlı Programlamaya Giriş</h3>
+<h4>Hesap Makinesi</h4>
+<table>
+<label>1. Sayı</label><br>
+<input type= "number" id= "number1"><br><br>
+<label>2. Sayı</label><br>
+<input type= "number" id= "number2">
+
+<tr>
+<td>
+<div id= "operators">
+<button onclick = "ToplamaHesapla()">+</button>
+<button onclick = "CikarmaHesapla()">-</button>
+<button onclick = "CarpmaHesapla()">*</button>
+<button onclick = "BolmeHesapla()">/</button>
+</div>
+</td>
+</tr>
+</table>
+<p id = "result">Sonuç = 0</p>
+
+</div>
+
+<script>
+
+function ToplamaHesapla()
+{
+  var field1=parseInt(document.getElementById("number1").value);
+  var field2=parseInt(document.getElementById("number2").value);
+  
+  document.getElementById("result").innerHTML ="Sonuç :" + parseFloat(field1+field2);
+  
+}
+
+function CikarmaHesapla()
+{
+	var field1=document.getElementById("number1").value;
+  var field2=document.getElementById("number2").value;
+  
+    document.getElementById("result").innerHTML ="Sonuç :" + parseFloat(field1-field2);
+}
+
+function CarpmaHesapla()
+{
+	var field1=document.getElementById("number1").value;
+  var field2=document.getElementById("number2").value;
+  
+    document.getElementById("result").innerHTML ="Sonuç :" + parseFloat(field1*field2);
+}
+
+function BolmeHesapla()
+{
+	var field1=document.getElementById("number1").value;
+  var field2=document.getElementById("number2").value;
+  
+    document.getElementById("result").innerHTML ="Sonuç :" + parseFloat(field1/field2);
+}
+
+</script>
+
+</body>
+</html>
